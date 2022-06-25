@@ -1,1 +1,12 @@
-<p>list works!</p>
+<h3>Liste des évènements</h3>
+<nb-list>
+<nb-list-item *ngFor="let item of list;">
+  <nb-card>
+    <nb-card-header>{{item.titre}}</nb-card-header>
+    <nb-card-body>
+      <button nb-button (click)="detail(item.idEvenement)">Détails</button>
+
+    </nb-card-body>
+  </nb-card>
+</nb-list-item>
+</nb-list>

@@ -1,1 +1,20 @@
-<p>detail works!</p>
+<nb-card *ngIf="currentevent">
+  <nb-card-header>
+    <h3>{{currentevent.titre}}</h3>
+  </nb-card-header>
+  <nb-card-body>
+    Date début : {{currentevent.dateDebut}}<br />
+    Date fin : {{currentevent.dateFin}}<br />
+    <br />
+    Catégorie : {{currentevent.categorie}}<br />
+    <strong>Prix : {{currentevent.prix}}</strong><br />
+    <hr />
+    Liste des inscrits
+    <hr />
+    <nb-list>
+      <nb-list-item *ngFor="let item of currentevent.inscrit">
+        {{item.prenom}} {{item.prenom}}
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>
